@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import ProductCard from './ProductCard';
-import SignIn from './SignIn';
-import Header from './Header';
+import ProductCard from './components/ProductCard';
+import SignIn from './components/SignIn';
+import Header from './components/Header';
 
 const Shop = () => {
   const [user, setUser] = useState(null);
