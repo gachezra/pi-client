@@ -11,7 +11,7 @@ const Shop = () => {
   const signIn = async () => {
     const scopes = ['username', 'payments'];
     console.log('Scopes: ', scopes);
-    console.log('Whatever this is: ', window.pi);
+    console.log('Whatever this is: ', window.Pi);
     const authResult = await window.Pi.authenticate(scopes, onIncompletePaymentFound);
     signInUser(authResult);
     setUser(authResult.user);
