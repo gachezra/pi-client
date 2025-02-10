@@ -87,6 +87,11 @@ const Shop = () => {
         pictureCaption="Picture by Dan Parsons - https://www.flickr.com/photos/dan90266/42759561/, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=323125"
         onClickBuy={() => orderProduct("Order Apple Pie", 3, { productId: 'apple_pie_1' })}
       />
+      {!authResult ? (
+        <p>No user data</p>
+      ) : (
+        <p>{authResult}</p>
+      )}
       <ProductCard
         name="Lemon Meringue Pie"
         description="Non-contractual picture. We might have used oranges because we had no lemons. Order at your own risk."
