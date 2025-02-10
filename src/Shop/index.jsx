@@ -11,7 +11,6 @@ const Shop = () => {
   const signIn = async () => {
     const scopes = ['username', 'payments'];
     const authResult = await window.Pi.authenticate(scopes, onIncompletePaymentFound);
-    console.log('Window.Pi result: ', authResult);
     signInUser(authResult);
     setUser(authResult.user);
   }
@@ -23,6 +22,7 @@ const Shop = () => {
 
   const signInUser = (authResult) => {
     axios.post('/user/signin', { authResult });
+    console.log(authResult);
     setShowModal(false);
   }
 
