@@ -4,7 +4,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script src="https://sdk.minepi.com/pi-sdk.js"><Script/>
+        <Script src="https://sdk.minepi.com/pi-sdk.js" />
         <Script id="pi-sdk-init">
           {`
             window.Pi ? window.Pi.init({ 
