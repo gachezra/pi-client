@@ -1,5 +1,6 @@
 
-function Test({ user }) {
+function Test() {
+  const user = getProps()
   return (  
     <div className="container">
       <Head>
@@ -17,7 +18,7 @@ function Test({ user }) {
 }
 
 // This gets called on every request
-export async function getServerSideProps() {
+async function getProps() {
   // authenticate the current user
   try {
     const user = await PiNetworkClient.Authenticate()
