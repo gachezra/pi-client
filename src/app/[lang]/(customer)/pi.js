@@ -108,7 +108,7 @@ useEffect(()=>{
   const loadpi = () => {
     window.Pi.init({
       version: "2.0",
-      sandbox: process.env.NEXT_PUBLIC_APP_SANDBOX == "true" ? true : false,
+      sandbox: process.env.APP_SANDBOX == "true" ? true : false,
     }).catch(function (error) {
       console.error(error);
       console.log("pi sdk failed");

@@ -6,7 +6,7 @@ export default function LocaleSelector({ lang }) {
   const router = useRouter();
   const localecode = Object.keys(locale);
   const changelang = (e) => {
-    router.push(process.env.NEXT_PUBLIC_APP_DOMAIN + e.target.value);
+    router.push(process.env.APP_DOMAIN + e.target.value);
   };
   return (
     <select

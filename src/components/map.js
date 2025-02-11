@@ -46,7 +46,7 @@ export default function MapMenu({ lang, lat = null, long = null, transcript }) {
   const piload = () => {
     window.Pi.init({
       version: "2.0",
-      sandbox: process.env.NEXT_PUBLIC_APP_SANDBOX == "true" ? true : false,
+      sandbox: process.env.APP_SANDBOX == "true" ? true : false,
     }).catch(function (error) {
       console.error(error);
       console.log("pi sdk failed");
@@ -57,7 +57,7 @@ export default function MapMenu({ lang, lat = null, long = null, transcript }) {
         navigator.userAgent.indexOf("Adr") > -1
       ) {
         window.Pi.openUrlInSystemBrowser(
-          process.env.NEXT_PUBLIC_USER_LOCATION_DOMAIN +
+          process.env.USER_LOCATION_DOMAIN +
             lang +
             "/getuserlocation"
         );
