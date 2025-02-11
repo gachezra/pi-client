@@ -30,7 +30,7 @@ async function getProps() {
   }
 
   // Pass data to the page via props
-  return { props: { user } }
+  return { user }
 }
 
 export default Test
